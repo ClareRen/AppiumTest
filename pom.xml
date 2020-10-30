@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+
+<parent>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <groupId>org.springframework.boot</groupId>
+    <version>2.3.4.RELEASE</version>
+</parent>
+
+<groupId>cyy</groupId>
+<artifactId>ClareTestAppium</artifactId>
+<version>1.0.0</version>
+<packaging>jar</packaging>
+
+<properties>
+    <cucumber.version>6.6.0</cucumber.version>
+    <junit.version>4.13</junit.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <hamcrest.version>2.2</hamcrest.version>
+    <lombok.version>1.18.0</lombok.version>
+    <appium.version>7.3.0</appium.version>
+    <commons-text.version>1.6</commons-text.version>
+    <fastjson.version>1.2.73</fastjson.version>
+    <slf4j.version>1.7.25</slf4j.version>
+</properties>
+
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-aop</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${slf4j.version}</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.hamcrest</groupId>
+        <artifactId>hamcrest</artifactId>
+        <version>${hamcrest.version}</version>
+    </dependency>
+
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-java</artifactId>
+        <version>${cucumber.version}</version>
+    </dependency>
+
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-junit</artifactId>
+        <version>${cucumber.version}</version>
+        <scope>test</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-spring</artifactId>
+        <version>${cucumber.version}</version>
+    </dependency>
+
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+        <scope>test</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>io.rest-assured</groupId>
+        <artifactId>rest-assured</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>${fastjson.version}</version>
+    </dependency>
+    <!-- 替换字符串中的占位符 -->
+    <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-text</artifactId>
+        <version>${commons-text.version}</version>
+    </dependency>
+
+    <dependency>
+        <groupId>io.appium</groupId>
+        <artifactId>java-client</artifactId>
+        <version>${appium.version}</version>
+    </dependency>
+</dependencies>
+
+<build>
+    <plugins>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version>
+            <configuration>
+                <encoding>UTF-8</encoding>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
+
+    </plugins>
+</build>
+</project>
